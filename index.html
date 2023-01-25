@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  	<meta name="mobile-web-app-capable" content="yes">
+  	<meta name="apple-mobile-web-app-capable" content="yes">
+	<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/intro.css">
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=305eb77d89a7ad5f89d325e52b16bed7"></script>
+	<script>
+		$(function(){
+			$('#wrapper2').hide();
+			$('.start').on('click',function(){
+				$('#wrapper').hide();
+				$('#wrapper2').show();
+			});
+			$(document).on('touchstart',function(){});
+			$('.st>a').on('click',function(){
+				window.location.href="game.html";
+			});
+		});
+	</script>
+</head>
+<body>
+	<section id="wrapper">
+		<div class="start">
+			<a href="#">start</a>
+		</div>
+	</section>
+	<section id="wrapper2">
+		<div class="story">
+			<div class="story_box">
+				<div class="st">
+					<p>
+						동물의숲의 나오는 주민인 탁호가 추운 겨울에 따듯한 털 신발을 사고싶었어요 하지만 발이 여러개 달린 문어 이다보니많은 돈이 필요했어요. 돈이 부족한 탁호는 방법이 없을까 고민하다가 겨울에 열리는 겨울맞이 축제에서 신발이 상품으로 걸린 토용잡기 게임을 발견했어요! 열심히 토용을 잡아서 좋은 신발을 구해 보아요!
+					</p>
+					<a href="#">let's go</a>
+				</div>
+		</div>
+	</section>
+</body>
+</html>

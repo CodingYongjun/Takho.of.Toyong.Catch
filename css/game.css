@@ -1,0 +1,237 @@
+@charset "utf-8";
+
+body,section,div,p{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+img{
+	display: block;
+	border: 0;
+}
+#step{
+	width: 100%;
+	height: 100%;
+	background: url("../img/storybg.jpg") no-repeat;
+	background-size: cover;
+	display: block;
+}
+#step>.story{
+	padding-top: 270px;
+}
+#step>.story>.story_box{
+	width: 310px;
+	height: 344px;
+	background: #F3D881;
+	border: 4px #590902 solid;
+	border-radius: 20px;
+	margin: 0 auto;
+}
+#step>.story>.story_box>.st{
+	display: blcok;
+}
+#step>.story>.story_box>.st>p{
+	width: 277px;
+	margin: 10px auto 10px;
+}
+#step>.story>.story_box>.st>a{
+	display: block;
+	width: 154px;
+	height: 41px;
+	margin: 0 auto;
+	text-indent: -9999px;
+	background: url("../img/go.png") no-repeat center;
+	background-size: contain;
+}
+#step>.story>.story_box>.dif{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#step>.story>.story_box>.dif>.ez{
+	width: 260px;
+	height: 80px;
+	background: url("../img/easy.png") no-repeat;
+	margin: 0 auto;
+	margin-top: 20px;
+	text-indent: -9999px;
+}
+#step>.story>.story_box>.dif>.n{
+	width: 260px;
+	height: 80px;
+	background: url("../img/normar.png") no-repeat;
+	margin: 0 auto;
+	text-indent: -9999px;
+}
+#step>.story>.story_box>.dif>.hd{
+	width: 260px;
+	height: 80px;
+	background: url("../img/hard.png") no-repeat;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	text-indent: -9999px;
+}
+
+#wrapper{
+	display: none;
+	overflow: hidden;
+}
+#wrapper>.game_top{
+	position: relative;
+}
+#wrapper>.game_top{
+	width: 100%;
+	height: 230px;
+	background: url("../img/gamebg.jpg") no-repeat;
+	background-size: cover;
+}
+#wrapper>.game_top>.step_img{
+	width: 183px;
+	height: 131px;
+	background: url("../img/hard_step.png") no-repeat bottom;
+	margin: 0 auto;
+	padding-top: 99px;
+}
+#wrapper>.game_top>.step_img.ez{ background-image: url("../img/easy_step.png");}
+#wrapper>.game_top>.step_img.n{ background-image: url("../img/normar_step.png");}
+#wrapper>.game_top>.score_time{
+	position: absolute;
+	transform: translateX(-50%);
+	top: 36px;
+	left: 50%;
+	width: 294px;
+	height: 76px;
+	background: #F3D881;
+	border: 4px #590902 solid;
+	border-radius: 20px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-content: center;
+}
+#wrapper>.game_top>.score_time>p{
+	width: 100px;
+	height: 47px;
+	font-size: 35px;
+	font-weight: bold;
+	line-height: 47px;
+	text-align: right;
+	background: url("../img/score.png") no-repeat left center;
+}
+#wrapper>.game_top>.score_time>p:nth-of-type(1){
+	margin-left: 30px;
+}
+#wrapper>.game_top>.score_time>p:nth-of-type(2){
+	margin-right: 30px;
+	background-image: url("../img/time.png");
+}
+#wrapper>.game_bottom{
+	width: 100%;
+	height: 610px;
+	background: url("../img/gamebg2.jpg") no-repeat;
+	background-size: cover;
+	padding-top: 14px;
+}
+#wrapper>.game_bottom>.tacoyaki{
+	width: 360px;
+	height: 396px;
+	margin: 0px auto;
+	background: url("../img/pan.png") no-repeat;
+}
+#wrapper>.game_bottom>.tacoyaki>.game_box{
+	width: 280px;
+	height: 310px;
+	position: relative;
+	transform: translateX(-50%);
+	left: 50%;
+	bottom: -20px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-content: space-between;
+}
+#wrapper>.game_bottom>.tacoyaki>.game_box>div{
+	width: 80px;
+	height: 70px;
+	position: relative;
+	overflow: hidden;
+	background: url("../img/g.png") no-repeat;
+	border: 0px;
+	border-radius: 50%;
+}
+#wrapper>.game_bottom>.tacoyaki>.game_box>div>div{
+	width: 80px;
+	height: 100px;
+	background: url("../img/toyong.png") no-repeat;
+	background-size: contain;
+	margin: 0px auto;
+	position: absolute;
+	bottom: -100px;
+	transition: all 0.1s;
+}
+#wrapper>.game_bottom>.tacoyaki>.game_box>div>div.active{ bottom: -28px; }
+#end{
+	width: 100%;
+	height: 100%;
+	background: url("../img/endbg.jpg") no-repeat;
+	background-size: cover;
+	position: relative;
+	display: none;
+}
+#end>.end_box{
+	width: 310px;
+	height: 600px;
+	background: #F3D881;
+	border: 4px #590902 solid;
+	border-radius: 20px;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	top: 50%;
+	left: 50%;
+}
+#end>.end_box>.shoes{
+	width: 100%;
+	height: 140px;
+	background: url("../img/end1.png") no-repeat center center;
+}
+#end>.end_box>.result{
+	width: 100%;
+	height: 110px;
+	background: url("../img/end1_1.png") no-repeat center center;
+}
+#end>.end_box>.mood{
+	width: 100%;
+	height: 180px;
+	background: url("../img/end1_2.png") no-repeat center center;
+}
+#end>.end_box>.score2{
+	width: 100%;
+	height: 80px;
+	margin-bottom: 24px;
+}
+#end>.end_box>.score2>p{
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+	padding-top: 10px;
+	color: #fff;
+}
+#end>.end_box>.replay_step{
+	display: flex;
+	flex-direction: row;
+	height: 43px;
+	margin: 0 auto;
+}
+#end>.end_box>.replay_step>a{
+	display: block;
+	width: 100%;
+	height: 43px;
+	background: url("../img/replay.png") no-repeat center center;
+	text-indent: -9999px;
+}
+#end>.end_box>.replay_step>a:nth-of-type(2){ background-image: url("../img/step.png"); }
