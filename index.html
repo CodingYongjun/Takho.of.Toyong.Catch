@@ -8,19 +8,7 @@
 	<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 	<title>탁호의 겨울맞이 토용잡기!</title>
 	<link rel="stylesheet" type="text/css" href="css/intro.css">
-	<script>
-		$(function(){
-			$('#wrapper2').hide();
-			$('.start').on('click',function(){
-				$('#wrapper').hide();
-				$('#wrapper2').show();
-			});
-			$(document).on('touchstart',function(){});
-			$('.st>a').on('click',function(){
-				window.location.href="game.html";
-			});
-		});
-	</script>
+	<script src="js/index.js"></script>
 </head>
 <body>
 	<section id="wrapper">
@@ -32,12 +20,14 @@
 		<div class="story">
 			<div class="story_box">
 				<div class="st">
-					<p>
-						동물의숲의 나오는 주민인 탁호가 추운 겨울에 따듯한 털 신발을 사고싶었어요 하지만 발이 여러개 달린 문어 이다보니많은 돈이 필요했어요. 돈이 부족한 탁호는 방법이 없을까 고민하다가 겨울에 열리는 겨울맞이 축제에서 신발이 상품으로 걸린 토용잡기 게임을 발견했어요! 열심히 토용을 잡아서 좋은 신발을 구해 보아요!
+					<p class="outTyping">
+						탁호는 추운 겨울에 따듯한 털 신발을 사고싶었어요 하지만 발이 여러개 달린 문어 이다보니까 많은 돈이 필요했어요. 돈이 부족한 탁호는 방법이 없을까 고민하다가 겨울에 열리는 겨울맞이 축제에서 신발이 상품으로 걸린 토용잡기 게임을 발견했어요! 열심히 토용을 잡아서 좋은 신발을 구해 보아요!
 					</p>
+					<p class="typing"></p>
 					<a href="#">let's go</a>
 				</div>
 		</div>
 	</section>
+	<script src="js/typing.js"></script>
 </body>
 </html>
