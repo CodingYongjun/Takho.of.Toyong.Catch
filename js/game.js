@@ -86,6 +86,7 @@ $(function() {
         let randomNum = Math.floor(Math.random() * 9) + 1;
         $('.to' + randomNum).addClass('active');
         clickable = true;
+        $('.game_box>div>div').css('background-image', 'url("img/toyong.png")')
         setTimeout(function() {
             $('.to' + randomNum).removeClass('active');
         }, difficulty);
@@ -93,13 +94,13 @@ $(function() {
 
     $('.game_box>div').children('div').click(function(event) {
         event.stopPropagation();
-        console.log("to click");
     });
     $('.game_box>div>div').on('click', function() {
         if (clickable) {
             score++;
             $('.score_time>.score').text(score);
             clickable = false;
+            $(this).css('background-image', 'url("img/hit.png")')
         }
     });
     $('.replay').on('click', function() {

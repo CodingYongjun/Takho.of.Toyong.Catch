@@ -1,0 +1,11 @@
+$(function(){
+    $('#wrapper2').hide();
+    $('.start').on('click',function(){
+        $('#wrapper').hide();
+        $('#wrapper2').show();
+    });
+    $(document).on('touchstart',function(){});
+    $('.st>a').on('click',function(){
+        window.location.href="game.html";
+    });
+});
