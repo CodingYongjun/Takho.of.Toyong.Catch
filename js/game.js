@@ -1,13 +1,15 @@
 $(function() {
-    let trans = 0;
     let score = 0;
     let second =60;
     let time;
     let counter;
     let clickable = false;
-    let num = 0;
     let difficulty = 1000;
 
+    $('.dif>a').on('click',function(){
+        document.getElementById('game').load();
+        document.getElementById('game').play();
+    })
     $('.ez').on('click', function() {
         difficulty = 1000;
         $('#step').hide();
@@ -52,18 +54,18 @@ $(function() {
                 $('.result').css('background-image', 'url("img/end2_1.png")');
                 $('.mood').css('background-image', 'url("img/end2_2.png")');
             }
-            if (score > 55) {
+            if (score > 50) {
                 $('.shoes').css('background-image', 'url("img/end3.png")');
                 $('.result').css('background-image', 'url("img/end3_1.png")');
                 $('.mood').css('background-image', 'url("img/end3_2.png")');
             }
         } else if (difficulty == 600) {
-            if (score > 30) {
+            if (score > 25) {
                 $('.shoes').css('background-image', 'url("img/end2.png")');
                 $('.result').css('background-image', 'url("img/end2_1.png")');
                 $('.mood').css('background-image', 'url("img/end2_2.png")');
             }
-            if (score > 45) {
+            if (score > 40) {
                 $('.shoes').css('background-image', 'url("img/end3.png")');
                 $('.result').css('background-image', 'url("img/end3_1.png")');
                 $('.mood').css('background-image', 'url("img/end3_2.png")');
@@ -92,6 +94,11 @@ $(function() {
         }, difficulty);
     }
 
+    function audioVolume() {
+        document.getElementById('hit').play();
+        document.getElementById('hit').volume=0.1;
+    }
+
     $('.game_box>div').children('div').click(function(event) {
         event.stopPropagation();
     });
@@ -101,6 +108,7 @@ $(function() {
             $('.score_time>.score').text(score);
             clickable = false;
             $(this).css('background-image', 'url("img/hit.png")')
+            audioVolume();
         }
     });
     $('.replay').on('click', function() {
@@ -122,5 +130,6 @@ $(function() {
         $('#wrapper').find('.score').text(score);
         $('#wrapper').find('.time').text(second);
         $('#end').hide();
+        document.getElementById('game').pause();
     });
 });
